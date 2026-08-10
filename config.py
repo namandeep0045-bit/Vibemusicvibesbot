@@ -1,0 +1,164 @@
+# ==============================================================================
+# config.py - Configuration
+# ==============================================================================
+# Pulls in all environment variables and sets defaults.
+# Don't commit your .env file!
+# ==============================================================================
+
+from os import getenv
+from typing import List
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (create one from sample.env)
+load_dotenv()
+
+
+class Config:
+    def __init__(self):
+
+        # ============ TELEGRAM API CREDENTIALS ============
+        # Get these from https://my.telegram.org
+        # Telegram API ID (numeric)
+        self.API_ID: int = int(getenv("API_ID", "36784100"))
+        # Telegram API Hash (hexadecimal)
+        self.API_HASH: str = getenv("API_HASH", "341f36a62f6078561e906a331e630c95")
+
+        # ============ BOT CONFIGURATION ============
+        # Bot token from @BotFather
+        self.BOT_TOKEN: str = getenv("BOT_TOKEN", "8662000369:AAELXvJCONwITbOk26mrsYiCv42r5-ItuKk")
+        # Group/channel ID for logs (must be negative)
+        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "-1004450412752"))
+        # Your user ID (get from @userinfobot)
+        self.OWNER_ID: int = int(getenv("OWNER_ID", "8556429856"))
+
+        # ============ DATABASE CONFIGURATION ============
+        # MongoDB connection URL (mongodb+srv://...)
+        self.MONGO_URL: str = getenv("MONGO_DB_URI", "")
+
+        # ============ MUSIC BOT LIMITS ============
+        # Convert minutes to seconds for duration limit
+        # Max song duration (default: 300 min)
+        self.DURATION_LIMIT: int = int(getenv("DURATION_LIMIT", "300")) * 60
+        # Max songs in queue (default: 30)
+        self.QUEUE_LIMIT: int = int(getenv("QUEUE_LIMIT", "30"))
+        # Max songs from playlist (default: 20)
+        self.PLAYLIST_LIMIT: int = int(getenv("PLAYLIST_LIMIT", "20"))
+
+        # ============ ASSISTANT/USERBOT SESSIONS ============
+        # Pyrogram session strings - get from @StringFatherBot
+        # You can have up to 3 assistants for handling multiple groups
+        # Primary assistant (required)
+        self.SESSION1: str = getenv("STRING_SESSION", "BQCZzqEAckdjqrmpj_U3by6W8XkB_pH7k8sAWy6QnrufoR9Hnfv1dqG96ivJXIt1Mm6GUsARsM8Ssza9MwDUWnbuK9ONFkV_re4GbPW_Hx6cRNcHJhv9i4bWewfKqdxZofA6rW37UO8aoKhb_z-umhInCMQvrNyAiG-yqv1U1Tp6N7br0rfZsX2AvImbExXYysERDO0MdNN1rc1bapV2nglxsPC34QlrbxqB4pQl7qQMqJlp0QuZU5g-Thu2wuFZ6N0w32ZYmpmVvt1wMk-zfOHMnTZImNDkg7QmLfYgdbk70CSB0FnFgODZNIlnQL1hC7BXNZzWrA4uO6GmP5lAqZZoiFL0nAAAAAICMS8yAA")
+        # Secondary assistant (optional)
+        self.SESSION2: str = getenv("STRING_SESSION2", "")
+        # Tertiary assistant (optional)
+        self.SESSION3: str = getenv("STRING_SESSION3", "")
+
+        # ============ SUPPORT LINKS ============
+        self.SUPPORT_CHANNEL: str = getenv(
+            "SUPPORT_CHANNEL", "https://t.me/Vibesxmusic")
+        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/Vibexmusicbots")
+
+        # ============ EXCLUDED CHATS ============
+        # Parse comma-separated chat IDs that assistants should never leave
+        self.EXCLUDED_CHATS: List[int] = self._parse_excluded_chats()
+
+        # ============ FEATURE FLAGS ============
+        # Auto-end stream when queue is empty
+        self.AUTO_END: bool = self._str_to_bool(getenv("AUTO_END", "False"))
+        # Auto-leave inactive chats
+        self.AUTO_LEAVE: bool = self._str_to_bool(getenv("AUTO_LEAVE", "False"))
+        # Enable/disable thumbnail generation (set False to use default thumb)
+        self.THUMB_GEN: bool = self._str_to_bool(getenv("THUMB_GEN", "True"))
+        # Enable/disable video playback commands (/vplay)
+        self.VIDEO_PLAY: bool = self._str_to_bool(getenv("VIDEO_PLAY", "False"))
+        # Maximum video height (pixels) for /vplay download AND playback
+        # Lower = less CPU usage. Recommended: 480 for 100+ groups
+        self.VIDEO_MAX_HEIGHT: int = self._parse_video_height()
+
+        # ============ YOUTUBE COOKIES ============
+        # Parse space-separated cookie URLs for age-restricted content
+        self.COOKIES_URL: List[str] = self._parse_cookies()
+
+        # ============ IMAGE URLS ============
+        # URLs for various bot images
+        self.DEFAULT_THUMB: str = getenv(
+            "DEFAULT_THUMB",
+            "https://i.ibb.co/Z6kGcfM7/image.jpg"  # Default thumbnail for START command
+        )
+        self.PING_IMG: str = getenv(
+            "PING_IMG", "https://i.ibb.co/DH21CvqG/image.jpg")    # Ping command image
+        self.START_IMG: str = getenv(
+            "START_IMG", "https://i.ibb.co/Z6kGcfM7/image.jpg")  # Start command image
+        self.RADIO_IMG: str = getenv(
+            "RADIO_IMG", "https://i.ibb.co/DH21CvqG/image.jpg")    # Radio command image
+
+        # ============ MODERATION ============
+        # List of usernames to exclude from admin mentions
+        self.EXCLUDED_USERNAMES: List[str] = getenv("EXCLUDED_USERNAMES", "").split()
+
+    def _parse_video_height(self) -> int:
+        """Clamp configured video height to a safe range."""
+        default_height = 480
+        raw_value = getenv("VIDEO_MAX_HEIGHT", str(default_height))
+        try:
+            height = int(raw_value)
+        except (TypeError, ValueError):
+            return default_height
+
+        # Allow disabling the cap by setting to 0 or negative (interpreted as unlimited)
+        if height <= 0:
+            return 0
+
+        # Clamp between 360p and 1080p
+        return max(360, min(height, 1080))
+
+    def _parse_excluded_chats(self) -> List[int]:
+        excluded = getenv("EXCLUDED_CHATS", "")
+        if not excluded:
+            return []
+
+        chat_ids = []
+        for chat_id in excluded.split(","):
+            chat_id = chat_id.strip()
+            if chat_id.lstrip('-').isdigit():
+                chat_ids.append(int(chat_id))
+        return chat_ids
+
+    def _parse_cookies(self) -> List[str]:
+        cookie_str = getenv("COOKIE_URL", "")
+        if not cookie_str:
+            return []
+
+        valid_sources = ["batbin.me", "pastebin.com", "paste.ee", "rentry.co"]
+        return [
+            url.strip()
+            for url in cookie_str.split()
+            if url.strip() and any(source in url for source in valid_sources)
+        ]
+
+    @staticmethod
+    def _str_to_bool(value: str) -> bool:
+        return value.lower() in ("true", "1", "yes", "y", "on")
+
+    def check(self) -> None:
+        required_vars = {
+            "API_ID": self.API_ID,
+            "API_HASH": self.API_HASH,
+            "BOT_TOKEN": self.BOT_TOKEN,
+            "MONGO_DB_URI": self.MONGO_URL,
+            "LOGGER_ID": self.LOGGER_ID,
+            "OWNER_ID": self.OWNER_ID,
+            "STRING_SESSION": self.SESSION1,
+        }
+
+        missing = [
+            name for name, value in required_vars.items()
+            if not value or (isinstance(value, int) and value == 0)
+        ]
+
+        if missing:
+            raise SystemExit(
+                f"❌ Missing required environment variables: {', '.join(missing)}\n"
+                f"Please check your .env file and ensure all required variables are set."
+            )
