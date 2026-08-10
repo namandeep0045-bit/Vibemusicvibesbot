@@ -1,0 +1,35 @@
+# ==============================================================================
+# .dockerignore - Docker Build Ignore Rules
+# ==============================================================================
+
+.git
+.gitignore
+.vscode
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.env
+.env.local
+venv/
+.venv/
+env/
+node_modules/
+cache/
+downloads/
+*.log
+.DS_Store
+Thumbsdb
+README.md
+CONTRIBUTING.md
+ARCHITECTURE.md
+Structure.md
+IMPLEMENTATION_COMPLETE.md
+COMPARISON.md
+CHECKLIST.md
