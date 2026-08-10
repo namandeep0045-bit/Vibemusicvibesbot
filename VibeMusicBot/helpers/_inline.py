@@ -1,0 +1,32 @@
+# ==============================================================================
+# _inline.py - Inline Buttons
+# ==============================================================================
+# Creates inline keyboard buttons for commands.
+# ==============================================================================
+
+from pyrogram import types
+
+
+class Inline:
+    def __init__(self):
+        pass
+
+    def cancel_dl(self, text) -> types.InlineKeyboardMarkup:
+        buttons = [[types.InlineKeyboardButton(text, callback_data="cancel_download")]]
+        return types.InlineKeyboardMarkup(buttons)
+
+    def controls(self, chat_id: int, timer: str = None) -> types.InlineKeyboardMarkup:
+        buttons = [
+            [
+                types.InlineKeyboardButton("⏮", callback_data=f"rewind_{chat_id}"),
+                types.InlineKeyboardButton("⏸", callback_data=f"pause_{chat_id}"),
+                types.InlineKeyboardButton("⏭", callback_data=f"skip_{chat_id}"),
+            ],
+        ]
+        if timer:
+            buttons.append([types.InlineKeyboardButton(f"{timer}", callback_data="timer")])
+        return types.InlineKeyboardMarkup(buttons)
+
+    def close_button(self) -> types.InlineKeyboardMarkup:
+        buttons = [[types.InlineKeyboardButton("Close ✖", callback_data="close_menu")]]
+        return types.InlineKeyboardMarkup(buttons)
