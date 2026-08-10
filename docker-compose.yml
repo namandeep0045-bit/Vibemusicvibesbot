@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  vibe:
+    build: .
+    container_name: vibe_music_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./VibeMusicBot/cookies:/app/VibeMusicBot/cookies
+      - ./downloads:/app/downloads
+    command: bash start
