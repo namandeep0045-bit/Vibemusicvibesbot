@@ -11,8 +11,8 @@ import time
 import pyrogram
 from pyrogram import enums, filters, types
 
-from HasiiMusic import tune, app, config, db, lang, logger, queue, tasks, userbot, yt
-from HasiiMusic.helpers import buttons
+from VibeMusicBot import tune, app, config, db, lang, logger, queue, tasks, userbot, yt
+from VibeMusicBot.helpers import buttons
 
 
 

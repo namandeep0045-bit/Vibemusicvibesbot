@@ -7,7 +7,7 @@
 import re
 from pyrogram import filters, types, enums
 
-from HasiiMusic import app, config, lang
+from VibeMusicBot import app, config, lang
 
 
 # Pattern to detect admin triggers

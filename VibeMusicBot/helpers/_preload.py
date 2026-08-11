@@ -8,7 +8,7 @@ import asyncio
 import logging
 from typing import Dict, Set
 
-logger = logging.getLogger("HasiiMusic")
+logger = logging.getLogger("VibeMusicBot")
 
 
 class PreloadManager:
@@ -55,7 +55,7 @@ class PreloadManager:
     async def _preload_task(self, chat_id: int, media) -> None:
         try:
             # Import here to avoid circular dependency
-            from HasiiMusic import yt
+            from VibeMusicBot import yt
 
             logger.debug(f"Starting preload for chat {chat_id}: {media.title}")
             
@@ -116,7 +116,7 @@ class PreloadManager:
         """
         try:
             # Import here to avoid circular dependency
-            from HasiiMusic import queue
+            from VibeMusicBot import queue
             
             # Get full queue and preload upcoming tracks (skip first one - that's current)
             all_tracks = queue.get_queue(chat_id)

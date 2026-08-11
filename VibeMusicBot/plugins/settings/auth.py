@@ -8,8 +8,8 @@ import time
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, db, lang
-from HasiiMusic.helpers import admin_check, is_admin, utils
+from VibeMusicBot import app, db, lang
+from VibeMusicBot.helpers import admin_check, is_admin, utils
 
 
 @app.on_message(filters.command(["auth", "unauth"]) & filters.group & ~app.bl_users)

@@ -8,8 +8,8 @@ import time
 import psutil
 
 from pyrogram import filters, types
-from HasiiMusic import app, tune, boot, config, lang
-from HasiiMusic.helpers import buttons
+from VibeMusicBot import app, tune, boot, config, lang
+from VibeMusicBot.helpers import buttons
 
 
 @app.on_message(filters.command(["alive", "ping"]) & ~app.bl_users)
@@ -35,7 +35,7 @@ async def _ping(_, m: types.Message):
     cpu_percent = psutil.cpu_percent(interval=0.5)
     
     # Get active chats count
-    from HasiiMusic import db
+    from VibeMusicBot import db
     active_chats = len(await db.get_chats())
     
     caption_text = m.lang["ping_pong"].format(

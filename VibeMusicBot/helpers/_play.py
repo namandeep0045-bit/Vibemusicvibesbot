@@ -9,7 +9,7 @@ import asyncio
 
 from pyrogram import enums, errors, types
 
-from HasiiMusic import app, config, db, queue, yt
+from VibeMusicBot import app, config, db, queue, yt
 
 
 def checkUB(play):

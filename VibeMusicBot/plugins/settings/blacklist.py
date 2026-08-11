@@ -6,7 +6,7 @@
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, db, lang
+from VibeMusicBot import app, db, lang
 
 
 #  ============== CHAT BLACKLIST COMMANDS ==============

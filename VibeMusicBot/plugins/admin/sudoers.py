@@ -6,8 +6,8 @@
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, db, lang
-from HasiiMusic.helpers import utils
+from VibeMusicBot import app, db, lang
+from VibeMusicBot.helpers import utils
 
 
 @app.on_message(filters.command(["addsudo", "delsudo", "rmsudo"]) & app.sudo_filter)

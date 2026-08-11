@@ -7,7 +7,7 @@
 from pyrogram import filters, types
 from pyrogram.errors import ChatAdminRequired
 
-from HasiiMusic import app, config
+from VibeMusicBot import app, config
 
 
 @app.on_message(filters.new_chat_members & filters.group)

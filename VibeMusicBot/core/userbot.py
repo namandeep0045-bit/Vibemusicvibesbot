@@ -8,7 +8,7 @@
 
 from pyrogram import Client
 
-from HasiiMusic import config, logger
+from VibeMusicBot import config, logger
 
 
 class Userbot(Client):

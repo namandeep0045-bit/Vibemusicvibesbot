@@ -12,8 +12,8 @@ from functools import wraps
 from pyrogram import filters, types
 from pyrogram.errors import FloodWait, QueryIdInvalid
 
-from HasiiMusic import tune, app, config, db, lang, logger, queue, tg, yt
-from HasiiMusic.helpers import admin_check, buttons, can_manage_vc
+from VibeMusicBot import tune, app, config, db, lang, logger, queue, tg, yt
+from VibeMusicBot.helpers import admin_check, buttons, can_manage_vc
 
 
 def safe_callback(func):

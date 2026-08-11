@@ -7,8 +7,8 @@
 from py_yt import VideosSearch
 from pyrogram import types
 
-from HasiiMusic import app
-from HasiiMusic.helpers import buttons
+from VibeMusicBot import app
+from VibeMusicBot.helpers import buttons
 
 
 @app.on_inline_query(~app.bl_users)

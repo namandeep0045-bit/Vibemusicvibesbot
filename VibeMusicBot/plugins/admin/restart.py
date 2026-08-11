@@ -11,7 +11,7 @@ import asyncio
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, db, lang, stop
+from VibeMusicBot import app, db, lang, stop
 
 
 @app.on_message(filters.command(["logs"]) & app.sudo_filter)
@@ -110,4 +110,4 @@ async def _restart(_, m: types.Message):
     asyncio.create_task(stop())
     await asyncio.sleep(2)
 
-    os.execl(sys.executable, sys.executable, "-m", "HasiiMusic")
+    os.execl(sys.executable, sys.executable, "-m", "VibeMusicBot")

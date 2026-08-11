@@ -17,8 +17,8 @@ import psutil
 from pyrogram import __version__, filters, types
 from pytgcalls import __version__ as pytgver
 
-from HasiiMusic import app, config, db, lang, userbot
-from HasiiMusic.plugins import all_modules
+from VibeMusicBot import app, config, db, lang, userbot
+from VibeMusicBot.plugins import all_modules
 
 
 @app.on_message(filters.command(["stats"]) & ~app.bl_users)

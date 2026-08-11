@@ -6,7 +6,7 @@
 
 import re
 from pyrogram import enums, errors, types
-from HasiiMusic import app, config
+from VibeMusicBot import app, config
 
 
 class Utilities:

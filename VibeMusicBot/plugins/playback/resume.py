@@ -8,8 +8,8 @@ import logging
 from pyrogram import filters, types
 from pyrogram.errors import ChatSendPlainForbidden, ChatWriteForbidden
 
-from HasiiMusic import tune, app, db, lang
-from HasiiMusic.helpers import buttons, can_manage_vc
+from VibeMusicBot import tune, app, db, lang
+from VibeMusicBot.helpers import buttons, can_manage_vc
 
 logger = logging.getLogger(__name__)
 

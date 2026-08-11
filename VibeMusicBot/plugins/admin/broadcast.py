@@ -11,7 +11,7 @@ from typing import List, Tuple
 
 from pyrogram import enums, errors, filters, types
 
-from HasiiMusic import app, db, lang
+from VibeMusicBot import app, db, lang
 
 
 # Global flag to track if a broadcast is currently running

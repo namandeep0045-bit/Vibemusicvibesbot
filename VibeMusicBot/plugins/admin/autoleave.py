@@ -8,7 +8,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from HasiiMusic import app, db
+from VibeMusicBot import app, db
 
 
 @app.on_message(

@@ -6,8 +6,8 @@
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, db, lang
-from HasiiMusic.helpers import can_manage_vc
+from VibeMusicBot import app, db, lang
+from VibeMusicBot.helpers import can_manage_vc
 
 
 @app.on_message(filters.command(["loop"]) & filters.group & ~app.bl_users)

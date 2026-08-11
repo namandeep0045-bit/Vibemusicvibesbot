@@ -8,9 +8,9 @@ from pyrogram import filters
 from pyrogram import types
 from pyrogram.errors import FloodWait, MessageIdInvalid, MessageDeleteForbidden, ChatSendPlainForbidden, ChatWriteForbidden
 
-from HasiiMusic import tune, app, config, db, lang, queue, tg, yt
-from HasiiMusic.helpers import buttons, utils
-from HasiiMusic.helpers._play import checkUB
+from VibeMusicBot import tune, app, config, db, lang, queue, tg, yt
+from VibeMusicBot.helpers import buttons, utils
+from VibeMusicBot.helpers._play import checkUB
 import asyncio
 import logging
 
@@ -212,7 +212,7 @@ async def play_hndlr(
             
             # ✨ NEW: Start preloading queued tracks in background
             try:
-                from HasiiMusic import preload
+                from VibeMusicBot import preload
                 asyncio.create_task(preload.start_preload(chat_id, count=2))
             except Exception:
                 # Non-critical, continue without preload
@@ -261,7 +261,7 @@ async def play_hndlr(
                 sent,
                 "<blockquote>❌ YouTube bot detection triggered.\n\n"
                 "Solution:\n"
-                "• Update YouTube cookies in `HasiiMusic/cookies/` folder\n"
+                "• Update YouTube cookies in `VibeMusicBot/cookies/` folder\n"
                 "• Wait a few minutes before trying again\n"
                 "• Try /radio for uninterrupted music\n\n"
                 f"Support: {config.SUPPORT_CHAT}</blockquote>"

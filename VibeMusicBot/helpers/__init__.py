@@ -1,5 +1,5 @@
 # ==============================================================================
-# HasiiMusic.helpers
+# VibeMusicBot.helpers
 # ==============================================================================
 # Exports all the helper singletons (buttons, thumb, utils, etc) so plugins
 # can grab them easily.

@@ -23,7 +23,7 @@ import logging
 
 from pymongo import AsyncMongoClient
 
-from HasiiMusic import config, logger, userbot
+from VibeMusicBot import config, logger, userbot
 
 
 # Suppress non-critical MongoDB background task errors
@@ -140,7 +140,7 @@ class MongoDB:
         return bool(self.active_calls[chat_id])
 
     async def get_admins(self, chat_id: int, reload: bool = False) -> list[int]:
-        from HasiiMusic.helpers._admins import reload_admins
+        from VibeMusicBot.helpers._admins import reload_admins
 
         # **PERFORMANCE FIX**: Increased cache from 5 to 15 minutes
         # Reduces MongoDB queries during peak load (15-20 concurrent streams)
@@ -190,7 +190,7 @@ class MongoDB:
         return num
 
     async def get_assistant(self, chat_id: int):
-        from HasiiMusic import tune
+        from VibeMusicBot import tune
 
         if chat_id not in self.assistant:
             doc = await self.assistantdb.find_one({"_id": chat_id})

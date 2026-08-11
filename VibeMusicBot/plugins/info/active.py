@@ -6,7 +6,7 @@
 
 import os
 from pyrogram import filters, types
-from HasiiMusic import app, db, lang, queue
+from VibeMusicBot import app, db, lang, queue
 
 
 @app.on_message(filters.command(["ac"]) & app.sudo_filter)

@@ -20,8 +20,8 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls import PyTgCalls, exceptions, types
 from pytgcalls.pytgcalls_session import PyTgCallsSession
 
-from HasiiMusic import app, config, db, lang, logger, preload, queue, userbot, yt
-from HasiiMusic.helpers import Media, Track, buttons, thumb
+from VibeMusicBot import app, config, db, lang, logger, preload, queue, userbot, yt
+from VibeMusicBot.helpers import Media, Track, buttons, thumb
 
 # Suppress pytgcalls harmless errors (library bugs - not critical)
 

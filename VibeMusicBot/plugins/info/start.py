@@ -6,8 +6,8 @@
 
 from pyrogram import enums, errors, filters, types
 
-from HasiiMusic import app, config, db, lang
-from HasiiMusic.helpers import buttons, utils
+from VibeMusicBot import app, config, db, lang
+from VibeMusicBot.helpers import buttons, utils
 
 
 @app.on_message(filters.command(["help"]) & filters.private & ~app.bl_users)

@@ -9,7 +9,7 @@
 
 from pathlib import Path
 
-from HasiiMusic import logger
+from VibeMusicBot import logger
 
 
 def ensure_dirs():

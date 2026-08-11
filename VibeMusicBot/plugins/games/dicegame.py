@@ -5,7 +5,7 @@
 # ==============================================================================
 
 from pyrogram import filters
-from HasiiMusic import app, lang
+from VibeMusicBot import app, lang
 
 # Dice 🎲
 @app.on_message(filters.command("dice"))

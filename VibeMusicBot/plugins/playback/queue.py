@@ -6,8 +6,8 @@
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, config, db, lang, queue
-from HasiiMusic.helpers import Track, buttons, thumb
+from VibeMusicBot import app, config, db, lang, queue
+from VibeMusicBot.helpers import Track, buttons, thumb
 
 
 @app.on_message(filters.command(["queue", "playing"]) & filters.group & ~app.bl_users)

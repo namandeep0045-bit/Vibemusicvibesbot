@@ -6,7 +6,7 @@
 
 from pyrogram import filters, types
 
-from HasiiMusic import app, db, lang
+from VibeMusicBot import app, db, lang
 
 
 @app.on_message(filters.command(["enable", "disable"]) & app.sudo_filter)

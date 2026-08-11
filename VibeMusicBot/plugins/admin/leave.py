@@ -8,7 +8,7 @@
 import asyncio
 from pyrogram import filters, types, errors, enums
 
-from HasiiMusic import app, db, lang, logger, userbot, config
+from VibeMusicBot import app, db, lang, logger, userbot, config
 
 
 @app.on_message(filters.command(["leave"]) & app.sudo_filter)

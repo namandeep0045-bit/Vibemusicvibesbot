@@ -6,8 +6,8 @@
 
 from pyrogram import filters, types
 
-from HasiiMusic import tune, app, db, lang, queue
-from HasiiMusic.helpers import can_manage_vc
+from VibeMusicBot import tune, app, db, lang, queue
+from VibeMusicBot.helpers import can_manage_vc
 
 
 @app.on_message(filters.command(["seek", "seekback"]) & filters.group & ~app.bl_users)
