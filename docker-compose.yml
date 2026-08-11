@@ -5,7 +5,7 @@ services:
     container_name: vibe_music_bot
     restart: unless-stopped
     env_file:
-  - .env
+      - .env
     volumes:
       - ./VibeMusicBot/cookies:/app/VibeMusicBot/cookies
       - ./downloads:/app/downloads
