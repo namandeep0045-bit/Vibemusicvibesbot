@@ -71,7 +71,7 @@
   "logger_usage": "<blockquote><b>භාවිතය:</b>\n\n/{0} [on|off]</blockquote>",
   "not_playing": "බොට් හඬ සංවාදයේ කිසිවක් වාදනය කරමින් නොමැත.",
   "pinging": "<blockquote>පිං කරමින් පවතී… කරුණාකර රැඳී සිටින්න…</blockquote>",
-  "ping_pong": "<b>HASII ꭙ MUSIC, උසස් ටෙලිග්‍රෑම් සංගීත බොට්!</b>\n\n<b><ul>බොට් තත්ත්වය<ul></b>\n\n<blockquote>✅ <b>මාර්ගගත සහ වාදනය වෙමින් පවතී</b>\n   ● ප්‍රමාදය: <code>{0}ms</code>\n   ● ක්‍රියාකාරී කාලය: <code>{1}</code>\n   ● PyTgCalls: <code>{2}ms</code>\n   ● RAM: <code>{3}</code>\n   ● CPU: <code>{4}%</code></blockquote>",
+  "ping_pong": "<b>VIBE ꭙ MUSIC, උසස් ටෙලිග්‍රෑම් සංගීත බොට්!</b>\n\n<b><ul>බොට් තත්ත්වය<ul></b>\n\n<blockquote>✅ <b>මාර්ගගත සහ වාදනය වෙමින් පවතී</b>\n   ● ප්‍රමාදය: <code>{0}ms</code>\n   ● ක්‍රියාකාරී කාලය: <code>{1}</code>\n   ● PyTgCalls: <code>{2}ms</code>\n   ● RAM: <code>{3}</code>\n   ● CPU: <code>{4}%</code></blockquote>",
   "play_admin": "<blockquote><u><b>පරිපාලක පමණි (Admin Only Play)</b></u>\n\nමෙම සමූහයේ වාදනය කළ හැක්කේ පරිපාලකයින්ට පමණි.</blockquote>",
   "play_banned": "<blockquote><u><b>{0} සහයකයා ඔබගේ සමූහයෙන් තහනම් කර ඇත</b></u>\n\n<b>ID:</b> <code>{1}</code>\n<b>නම:</b> {2}\n<b>Username:</b> {3}</blockquote>",
   "play_media": "<blockquote>🔴 <b>ඉල්ලුම් කළ විකාශනය ආරම්භ විය</b></blockquote>\n<blockquote>➤ <b>මාතෘකාව :</b> <a href={0}>{1}</a>\n➤ <b>කාලය :</b> {2} විනාඩි\n➤ <b>ඉල්ලුම් කළේ :</b> {3}</blockquote>",

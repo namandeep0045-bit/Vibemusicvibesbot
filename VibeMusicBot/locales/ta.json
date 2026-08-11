@@ -71,7 +71,7 @@
   "logger_usage": "<blockquote><b>பயன்பாடு:</b>\n\n/{0} [on|off]</blockquote>",
   "not_playing": "போட் குரல் அரட்டையில் எதையும் இயக்கவில்லை.",
   "pinging": "<blockquote>பிங் செய்கிறது… காத்திருக்கவும்…</blockquote>",
-  "ping_pong": "<b>HASII ꭙ MUSIC, மேம்பட்ட டெலிகிராம் மியூசிக் போட்!</b>\n\n<b><ul>போட் நிலை<ul></b>\n\n<blockquote>✅ <b>ஆன்லைன் மற்றும் ஸ்ட்ரீமிங்</b>\n   ● தாமதம்: <code>{0}ms</code>\n   ● அப்டைம்: <code>{1}</code>\n   ● PyTgCalls: <code>{2}ms</code>\n   ● RAM: <code>{3}</code>\n   ● CPU: <code>{4}%</code></blockquote>",
+  "ping_pong": "<b>VIBE ꭙ MUSIC, மேம்பட்ட டெலிகிராம் மியூசிக் போட்!</b>\n\n<b><ul>போட் நிலை<ul></b>\n\n<blockquote>✅ <b>ஆன்லைன் மற்றும் ஸ்ட்ரீமிங்</b>\n   ● தாமதம்: <code>{0}ms</code>\n   ● அப்டைம்: <code>{1}</code>\n   ● PyTgCalls: <code>{2}ms</code>\n   ● RAM: <code>{3}</code>\n   ● CPU: <code>{4}%</code></blockquote>",
   "play_admin": "<blockquote><u><b>நிர்வாகி மட்டும் (Admin Only Play)</b></u>\n\nஇந்த குழுவில் நிர்வாகிகள் மட்டுமே இயக்க அனுமதிக்கப்படுவார்கள்.</blockquote>",
   "play_banned": "<blockquote><u><b>{0} உதவியாளர் உங்கள் குழுவிலிருந்து தடைசெய்யப்பட்டுள்ளார்</b></u>\n\n<b>ID:</b> <code>{1}</code>\n<b>பெயர்:</b> {2}\n<b>Username:</b> {3}</blockquote>",
   "play_media": "<blockquote>🔴 <b>கோரப்பட்ட ஸ்ட்ரீம் தொடங்கியது</b></blockquote>\n<blockquote>➤ <b>தலைப்பு :</b> <a href={0}>{1}</a>\n➤ <b>காலம் :</b> {2} நிமிடங்கள்\n➤ <b>கோரியவர் :</b> {3}</blockquote>",

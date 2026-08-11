@@ -71,7 +71,7 @@
   "logger_usage": "<blockquote><b>उपयोग:</b>\n\n/{0} [on|off]</blockquote>",
   "not_playing": "बॉट वॉइस चैट में कुछ भी स्ट्रीम नहीं कर रहा है।",
   "pinging": "<blockquote>पिंग हो रहा है… कृपया प्रतीक्षा करें…</blockquote>",
-  "ping_pong": "<b>HASII ꭙ MUSIC, उन्नत टेलीग्राम म्यूजिक बॉट!</b>\n\n<b><ul>बॉट स्थिति<ul></b>\n\n<blockquote>✅ <b>ऑनलाइन और स्ट्रीमिंग</b>\n   ● विलंबता: <code>{0}ms</code>\n   ● अपटाइम: <code>{1}</code>\n   ● PyTgCalls: <code>{2}ms</code>\n   ● RAM: <code>{3}</code>\n   ● CPU: <code>{4}%</code></blockquote>",
+  "ping_pong": "<b>VIBE ꭙ MUSIC, उन्नत टेलीग्राम म्यूजिक बॉट!</b>\n\n<b><ul>बॉट स्थिति<ul></b>\n\n<blockquote>✅ <b>ऑनलाइन और स्ट्रीमिंग</b>\n   ● विलंबता: <code>{0}ms</code>\n   ● अपटाइम: <code>{1}</code>\n   ● PyTgCalls: <code>{2}ms</code>\n   ● RAM: <code>{3}</code>\n   ● CPU: <code>{4}%</code></blockquote>",
   "play_admin": "<blockquote><u><b>केवल एडमिन प्ले कर सकते हैं</b></u>\n\nइस ग्रुप में केवल एडमिन को ही प्ले करने की अनुमति है।</blockquote>",
   "play_banned": "<blockquote><u><b>{0} सहायक को आपके ग्रुप से प्रतिबंधित कर दिया गया है</b></u>\n\n<b>ID:</b> <code>{1}</code>\n<b>नाम:</b> {2}\n<b>Username:</b> {3}</blockquote>",
   "play_media": "<blockquote>🔴 <b>अनुरोधित स्ट्रीम शुरू हो गई है</b></blockquote>\n<blockquote>➤ <b>शीर्षक :</b> <a href={0}>{1}</a>\n➤ <b>अवधि :</b> {2} मिनट\n➤ <b>अनुरोधकर्ता :</b> {3}</blockquote>",
