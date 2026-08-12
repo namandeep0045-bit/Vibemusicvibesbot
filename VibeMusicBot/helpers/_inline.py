@@ -1,3 +1,7 @@
+# ==============================================================================
+# _inline.py - Inline Buttons
+# ==============================================================================
+
 from pyrogram import types
 
 
@@ -6,12 +10,9 @@ class Inline:
         pass
 
     def cancel_dl(self, text) -> types.InlineKeyboardMarkup:
-        buttons = [[
-            types.InlineKeyboardButton(
-                text,
-                callback_data="cancel_download"
-            )
-        ]]
+        buttons = [
+            [types.InlineKeyboardButton(text, callback_data="cancel_download")]
+        ]
         return types.InlineKeyboardMarkup(buttons)
 
     def start_key(self, lang, private=False) -> types.InlineKeyboardMarkup:
@@ -19,13 +20,13 @@ class Inline:
             [
                 types.InlineKeyboardButton(
                     "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ɢʀᴏᴜᴘ",
-                    url="https://t.me/Vibemusicvibes_bot?startgroup=true"
+                    url="https://t.me/Vibemusicvibes_bot?startgroup=true",
                 )
             ],
             [
                 types.InlineKeyboardButton(
                     "📚 ᴄᴏᴍᴍᴀɴᴅꜱ",
-                    callback_data="help_menu"
+                    callback_data="help_menu",
                 )
             ],
         ]
@@ -41,20 +42,25 @@ class Inline:
         ]
 
         if timer:
-            buttons.append([
-                types.InlineKeyboardButton(
-                    f"{timer}",
-                    callback_data="timer"
-                )
-            ])
+            buttons.append(
+                [types.InlineKeyboardButton(timer, callback_data="timer")]
+            )
 
         return types.InlineKeyboardMarkup(buttons)
 
     def close_button(self) -> types.InlineKeyboardMarkup:
-        buttons = [[
-            types.InlineKeyboardButton(
-                "Close ✖",
-                callback_data="close_menu"
-            )
-        ]]
+        buttons = [
+            [types.InlineKeyboardButton("Close ✖", callback_data="close_menu")]
+        ]
+        return types.InlineKeyboardMarkup(buttons)
+
+    def ping_markup(self, text) -> types.InlineKeyboardMarkup:
+        buttons = [
+            [
+                types.InlineKeyboardButton(
+                    text,
+                    url="https://t.me/Vibexmusicbots",
+                )
+            ]
+        ]
         return types.InlineKeyboardMarkup(buttons)
