@@ -64,3 +64,25 @@ class Inline:
             ]
         ]
         return types.InlineKeyboardMarkup(buttons)
+
+    def help_markup(self, lang, back=False):
+        if back:
+            buttons = [
+                [types.InlineKeyboardButton(lang["help_btn_admins"], callback_data="help_admins"),
+                 types.InlineKeyboardButton(lang["help_btn_play"], callback_data="help_play")],
+                [types.InlineKeyboardButton(lang["help_btn_queue"], callback_data="help_queue"),
+                 types.InlineKeyboardButton(lang["help_btn_ping"], callback_data="help_ping")],
+                [types.InlineKeyboardButton(lang["help_btn_stats"], callback_data="help_stats"),
+                 types.InlineKeyboardButton(lang["help_btn_sudo"], callback_data="help_sudo")],
+                [types.InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="help_main")],
+            ]
+        else:
+            buttons = [
+                [types.InlineKeyboardButton(lang["help_btn_admins"], callback_data="help_admins"),
+                 types.InlineKeyboardButton(lang["help_btn_play"], callback_data="help_play")],
+                [types.InlineKeyboardButton(lang["help_btn_queue"], callback_data="help_queue"),
+                 types.InlineKeyboardButton(lang["help_btn_ping"], callback_data="help_ping")],
+                [types.InlineKeyboardButton(lang["help_btn_stats"], callback_data="help_stats"),
+                 types.InlineKeyboardButton(lang["help_btn_sudo"], callback_data="help_sudo")],
+            ]
+        return types.InlineKeyboardMarkup(buttons)
