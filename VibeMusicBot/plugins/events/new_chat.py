@@ -29,7 +29,7 @@ async def new_chat_member(_, message: types.Message):
             added_by_name = added_by.mention if added_by else "ᴜɴᴋɴᴏᴡɴ"
 
             # Create the formatted message with blockquote
-            text = f"""<blockquote>🟢 <b>˹˹ʜᴀꜱɪɪ ꭙ ᴍᴜꜱɪᴄ˼ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ</b></blockquote>
+            text = f"""<blockquote>🟢 <b>˹˹ᴠɪʙᴇ ꭙ ᴍᴜꜱɪᴄ˼ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ</b></blockquote>
 
 <blockquote>
 🔖 <b>ᴄʜᴀᴛ ɴᴀᴍᴇ:</b> {chat_name}
@@ -71,7 +71,7 @@ async def left_chat_member(_, message: types.Message):
         removed_by_name = removed_by.mention if removed_by else "ᴜɴᴋɴᴏᴡɴ"
 
         # Create the formatted message with blockquote
-        text = f"""<blockquote>🔴 <b>˹ʜᴀꜱɪɪ ꭙ ᴍᴜꜱɪᴄ˼ ʀᴇᴍᴏᴠᴇᴅ ꜰʀᴏᴍ ᴀ ɢʀᴏᴜᴘ</b></blockquote>
+        text = f"""<blockquote>🔴 <b>˹ᴠɪʙᴇ ꭙ ᴍᴜꜱɪᴄ˼ ʀᴇᴍᴏᴠᴇᴅ ꜰʀᴏᴍ ᴀ ɢʀᴏᴜᴘ</b></blockquote>
 
 <blockquote>
 🔖 <b>ᴄʜᴀᴛ ɴᴀᴍᴇ:</b> {chat_name}
